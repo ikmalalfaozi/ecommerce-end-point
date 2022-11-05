@@ -1,0 +1,1046 @@
+{
+	"info": {
+		"_postman_id": "533c7243-753c-4dcc-af42-169bc274d4a1",
+		"name": "ecommerce-end-point",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24262161"
+	},
+	"item": [
+		{
+			"name": "Add New Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\" : \"Redmi Note 9\",\r\n\t\"price\": 200000,\r\n\t\"quantity\": 10,\r\n\t\"image_url\": \"https://source.unsplash.com/random/900x700/?handphone\",\r\n\t\"description\": \"Ini adalah HP Redmi Note 9 ...\",\r\n\t\"category\": \"Elektronik\",\r\n\t\"sku\": \"Redmi Note 9\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/products",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "localhost:8080/v1/products",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"name\" : \"Redmi Note 9\",\r\n\t\"price\": 200000,\r\n\t\"quantity\": 10,\r\n\t\"image_url\": \"https://source.unsplash.com/random/900x700/?handphone\",\r\n\t\"description\": \"Ini adalah HP Redmi Note 9 ...\",\r\n\t\"category\": \"Elektronik\",\r\n\t\"sku\": \"Redmi Note 9\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/products",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 05 Nov 2022 09:41:26 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "228"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"product_id\": 16,\n    \"name\": \"Redmi Note 9\",\n    \"price\": 200000,\n    \"quantity\": 10,\n    \"image_url\": \"https://source.unsplash.com/random/900x700/?handphone\",\n    \"description\": \"Ini adalah HP Redmi Note 9 ...\",\n    \"category\": \"Elektronik\",\n    \"sku\": \"Redmi Note 9\"\n}"
+				}
+			]
+		},
+		{
+			"name": "GET List of Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/products?page=2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"products"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "localhost:8080/v1/products?page=2",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/products?page=2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"products"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 05 Nov 2022 09:42:54 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1140"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"product_id\": 12,\n        \"name\": \"Adidas\",\n        \"price\": 200000,\n        \"quantity\": 10,\n        \"image_url\": \"https://source.unsplash.com/random/900x700/?shoes\",\n        \"description\": \"Ini adalah sepatu Adidas\",\n        \"category\": \"Fashion\",\n        \"sku\": \"Adidas Shoes Hitam Ukuran 42\"\n    },\n    {\n        \"product_id\": 13,\n        \"name\": \"Adidas\",\n        \"price\": 200000,\n        \"quantity\": 10,\n        \"image_url\": \"https://source.unsplash.com/random/900x700/?shoes\",\n        \"description\": \"Ini adalah sepatu Adidas\",\n        \"category\": \"Fashion\",\n        \"sku\": \"Adidas Shoes Hitam Ukuran 42\"\n    },\n    {\n        \"product_id\": 14,\n        \"name\": \"Adidas\",\n        \"price\": 200000,\n        \"quantity\": 10,\n        \"image_url\": \"https://source.unsplash.com/random/900x700/?shoes\",\n        \"description\": \"Ini adalah sepatu Adidas\",\n        \"category\": \"Fashion\",\n        \"sku\": \"Adidas Shoes Hitam Ukuran 42\"\n    },\n    {\n        \"product_id\": 15,\n        \"name\": \"Redmi Note 10\",\n        \"price\": 200000,\n        \"quantity\": 10,\n        \"image_url\": \"https://source.unsplash.com/random/900x700/?handphone\",\n        \"description\": \"Ini adalah HP Redmi Note 10 ...\",\n        \"category\": \"Elektronik\",\n        \"sku\": \"Redmi Note 10\"\n    },\n    {\n        \"product_id\": 16,\n        \"name\": \"Redmi Note 9\",\n        \"price\": 200000,\n        \"quantity\": 10,\n        \"image_url\": \"https://source.unsplash.com/random/900x700/?handphone\",\n        \"description\": \"Ini adalah HP Redmi Note 9 ...\",\n        \"category\": \"Elektronik\",\n        \"sku\": \"Redmi Note 9\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "GET Specific Product by Product Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/products/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"products",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "localhost:8080/v1/products/1",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/products/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"products",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 05 Nov 2022 09:43:21 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "223"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"product_id\": 2,\n    \"name\": \"Adidas\",\n    \"price\": 200000,\n    \"quantity\": 5,\n    \"image_url\": \"https://source.unsplash.com/random/900x700/?shoes\",\n    \"description\": \"Ini adalah sepatu Adidas\",\n    \"category\": \"Fashion\",\n    \"sku\": \"Adidas Shoes Hitam Ukuran 42\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add New Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"user15@gmail.com\",\r\n\t\"password\": \"user15\",\r\n    \"firstname\": \"user15\",\r\n    \"lastname\": \"user15\",\r\n    \"address\" : \"Jl. Ahmad Yani No 58 ...\",\r\n    \"zip\": \"53262\",\r\n\t\"phone\": \"085158887776\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/customers",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"customers"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "localhost:8080/v1/customers",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"user15@gmail.com\",\r\n\t\"password\": \"user15\",\r\n    \"firstname\": \"user15\",\r\n    \"lastname\": \"user15\",\r\n    \"address\" : \"Jl. Ahmad Yani No 58 ...\",\r\n    \"zip\": \"53262\",\r\n\t\"phone\": \"085158887776\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/customers",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"customers"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 05 Nov 2022 09:44:40 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "234"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"customer_id\": 16,\n    \"email\": \"user15@gmail.com\",\n    \"password\": \"$2a$10$Xhvo7l8inGMFzA4nSZulZ.AQOxEeQhaHZ37.PcVoD17R.iHJ4umNS\",\n    \"firstname\": \"user15\",\n    \"lastname\": \"user15\",\n    \"address\": \"Jl. Ahmad Yani No 58 ...\",\n    \"zip\": \"53262\",\n    \"phone\": \"085158887776\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get List of Customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/customers",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"customers"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "localhost:8080/v1/customers",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/customers",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"customers"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 05 Nov 2022 09:45:18 GMT"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"customer_id\": 1,\n        \"email\": \"user@gmail.com\",\n        \"password\": \"$2a$10$rJZH4vqctPv0XSKaQj/lA.Aue5XdiRhMAEsyRzMCl9UgpcaRuq08a\",\n        \"firstname\": \"user\",\n        \"lastname\": \"user\",\n        \"address\": \"Jl. Ahmad Yani No 58 ...\",\n        \"zip\": \"53262\",\n        \"phone\": \"085158887776\"\n    },\n    {\n        \"customer_id\": 2,\n        \"email\": \"user2@gmail.com\",\n        \"password\": \"$2a$10$Nc7qOgMZEShs.53sXlqOh.hCoqxCqObn1Tv.hz.AYJPk90bPgHUjq\",\n        \"firstname\": \"user2\",\n        \"lastname\": \"user2\",\n        \"address\": \"Jl. Ahmad Yani No 58 ...\",\n        \"zip\": \"53262\",\n        \"phone\": \"085158887776\"\n    },\n    {\n        \"customer_id\": 3,\n        \"email\": \"user3@gmail.com\",\n        \"password\": \"$2a$10$gjK98HkeF5VPqxvWdKHTFOZzDLw0XHvJjdsjIatZxI0zHM8g6u0cm\",\n        \"firstname\": \"user3\",\n        \"lastname\": \"user3\",\n        \"address\": \"Jl. Ahmad Yani No 58 ...\",\n        \"zip\": \"53262\",\n        \"phone\": \"085158887776\"\n    },\n    {\n        \"customer_id\": 4,\n        \"email\": \"user4@gmail.com\",\n        \"password\": \"$2a$10$uQ.y0u8VUvXMTCAjufO8UeBH3Lm2XbI11P8qmX7p2JZ0eE29zu7bW\",\n        \"firstname\": \"user4\",\n        \"lastname\": \"user4\",\n        \"address\": \"Jl. Ahmad Yani No 58 ...\",\n        \"zip\": \"53262\",\n        \"phone\": \"085158887776\"\n    },\n    {\n        \"customer_id\": 5,\n        \"email\": \"user5@gmail.com\",\n        \"password\": \"$2a$10$exqXyCCO42AGvO09o0ppGe.r8egfQho39qee.EX7Ar/0SDvyIGlfS\",\n        \"firstname\": \"user5\",\n        \"lastname\": \"user5\",\n        \"address\": \"Jl. Ahmad Yani No 58 ...\",\n        \"zip\": \"53262\",\n        \"phone\": \"085158887776\"\n    },\n    {\n        \"customer_id\": 6,\n        \"email\": \"user6@gmail.com\",\n        \"password\": \"$2a$10$7vjArrKPGxS2IKN5kUDfxOXkzR4.HzneinWaHtHD.Wbu6siZhNFcq\",\n        \"firstname\": \"user6\",\n        \"lastname\": \"user6\",\n        \"address\": \"Jl. Ahmad Yani No 58 ...\",\n        \"zip\": \"53262\",\n        \"phone\": \"085158887776\"\n    },\n    {\n        \"customer_id\": 7,\n        \"email\": \"user7@gmail.com\",\n        \"password\": \"$2a$10$HA/Ep4JGWUTLtewRVd8XguKeonxQP8wEv5G.ZOxpQHfPKyQXV7kC.\",\n        \"firstname\": \"user7\",\n        \"lastname\": \"user7\",\n        \"address\": \"Jl. Ahmad Yani No 58 ...\",\n        \"zip\": \"53262\",\n        \"phone\": \"085158887776\"\n    },\n    {\n        \"customer_id\": 8,\n        \"email\": \"user8@gmail.com\",\n        \"password\": \"$2a$10$h1w4IH5di63iWBdhB6FqpulWBetGoBT.kIU8BgI6/07774tPy1Kga\",\n        \"firstname\": \"user8\",\n        \"lastname\": \"user8\",\n        \"address\": \"Jl. Ahmad Yani No 58 ...\",\n        \"zip\": \"53262\",\n        \"phone\": \"085158887776\"\n    },\n    {\n        \"customer_id\": 9,\n        \"email\": \"user9@gmail.com\",\n        \"password\": \"$2a$10$7IFQqv1AwEZMaW6Mw.DZVeGV8fG6g1F7wWjvlWHMG1lO5P/ZFW4tW\",\n        \"firstname\": \"user9\",\n        \"lastname\": \"user9\",\n        \"address\": \"Jl. Ahmad Yani No 58 ...\",\n        \"zip\": \"53262\",\n        \"phone\": \"085158887776\"\n    },\n    {\n        \"customer_id\": 10,\n        \"email\": \"user10@gmail.com\",\n        \"password\": \"$2a$10$X0FCr9vPAlhzJ/Q4beM2bOHljeJqHTjba1ItPxcHUiepno/IlZvZu\",\n        \"firstname\": \"user10\",\n        \"lastname\": \"user10\",\n        \"address\": \"Jl. Ahmad Yani No 58 ...\",\n        \"zip\": \"53262\",\n        \"phone\": \"085158887776\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get Specific Customer by Customer Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/customers/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"customers",
+						"5"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "localhost:8080/v1/customers/5",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/customers/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"customers",
+								"5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 05 Nov 2022 09:45:36 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "230"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"customer_id\": 5,\n    \"email\": \"user5@gmail.com\",\n    \"password\": \"$2a$10$exqXyCCO42AGvO09o0ppGe.r8egfQho39qee.EX7Ar/0SDvyIGlfS\",\n    \"firstname\": \"user5\",\n    \"lastname\": \"user5\",\n    \"address\": \"Jl. Ahmad Yani No 58 ...\",\n    \"zip\": \"53262\",\n    \"phone\": \"085158887776\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Checkout Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer_id\" : 1,\r\n    \"product_id\" : 5,\r\n    \"quantity\"  : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/products/checkout",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"products",
+						"checkout"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "localhost:8080/v1/products/checkout",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer_id\" : 1,\r\n    \"product_id\" : 5,\r\n    \"quantity\"  : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/products/checkout",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"products",
+								"checkout"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 05 Nov 2022 09:46:10 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "45"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"customer_id\": 1,\n    \"product_id\": 5,\n    \"quantity\": 4\n}"
+				}
+			]
+		},
+		{
+			"name": "Buy Product Directly",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer_id\" : 3,\r\n    \"product_id\" : 3,\r\n    \"quantity\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/products/buy",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"products",
+						"buy"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "localhost:8080/v1/products/buy",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer_id\" : 3,\r\n    \"product_id\" : 3,\r\n    \"quantity\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/products/buy",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"products",
+								"buy"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 05 Nov 2022 09:46:31 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "165"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"order_id\": 7,\n    \"customer_id\": 3,\n    \"product_id\": 3,\n    \"quantity\": 1,\n    \"status\": \"Processed\",\n    \"order_date\": \"2022-11-05T16:46:31.773691+07:00\",\n    \"shipped_date\": \"0001-01-01T00:00:00Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Buy Product From Shopping Cart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer_id\" : 1,\r\n    \"product_id\"  : 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/carts/buy",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"carts",
+						"buy"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "localhost:8080/v1/carts/buy",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer_id\" : 1,\r\n    \"product_id\"  : 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/carts/buy",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"carts",
+								"buy"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 05 Nov 2022 09:47:22 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "165"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"order_id\": 8,\n    \"customer_id\": 1,\n    \"product_id\": 5,\n    \"quantity\": 4,\n    \"status\": \"Processed\",\n    \"order_date\": \"2022-11-05T16:47:22.708654+07:00\",\n    \"shipped_date\": \"0001-01-01T00:00:00Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Edit Shopping Cart",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer_id\": 1,\r\n    \"product_id\": 5,\r\n    \"quantity\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/carts",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"carts"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "localhost:8080/v1/carts",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer_id\": 1,\r\n    \"product_id\": 5,\r\n    \"quantity\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/carts",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"carts"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 05 Nov 2022 09:47:47 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "45"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"customer_id\": 1,\n    \"product_id\": 5,\n    \"quantity\": 3\n}"
+				}
+			]
+		},
+		{
+			"name": "Get List of Checked Out Products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/carts/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"carts",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "localhost:8080/v1/carts/2",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/carts/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"carts",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 05 Nov 2022 09:48:12 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "93"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"customer_id\": 2,\n        \"product_id\": 6,\n        \"quantity\": 1\n    },\n    {\n        \"customer_id\": 2,\n        \"product_id\": 7,\n        \"quantity\": 1\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get the Specific Product Checked Out",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/carts/2/6",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"carts",
+						"2",
+						"6"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "localhost:8080/v1/carts/2/6",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/carts/2/6",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"carts",
+								"2",
+								"6"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 05 Nov 2022 09:48:46 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "45"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"customer_id\": 2,\n    \"product_id\": 6,\n    \"quantity\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "Get List of Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/orders/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "localhost:8080/v1/orders/1",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/orders/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"orders",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 05 Nov 2022 09:49:11 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "796"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"order_id\": 3,\n        \"customer_id\": 1,\n        \"product_id\": 2,\n        \"quantity\": 4,\n        \"status\": \"Processed\",\n        \"order_date\": \"2022-11-04T17:27:33+07:00\",\n        \"shipped_date\": \"0001-01-01T00:00:00Z\"\n    },\n    {\n        \"order_id\": 4,\n        \"customer_id\": 1,\n        \"product_id\": 4,\n        \"quantity\": 1,\n        \"status\": \"Processed\",\n        \"order_date\": \"2022-11-04T17:36:48+07:00\",\n        \"shipped_date\": \"0001-01-01T00:00:00Z\"\n    },\n    {\n        \"order_id\": 5,\n        \"customer_id\": 1,\n        \"product_id\": 4,\n        \"quantity\": 1,\n        \"status\": \"Processed\",\n        \"order_date\": \"2022-11-04T17:37:59+07:00\",\n        \"shipped_date\": \"0001-01-01T00:00:00Z\"\n    },\n    {\n        \"order_id\": 6,\n        \"customer_id\": 1,\n        \"product_id\": 4,\n        \"quantity\": 1,\n        \"status\": \"Processed\",\n        \"order_date\": \"2022-11-04T17:42:58+07:00\",\n        \"shipped_date\": \"0001-01-01T00:00:00Z\"\n    },\n    {\n        \"order_id\": 8,\n        \"customer_id\": 1,\n        \"product_id\": 5,\n        \"quantity\": 4,\n        \"status\": \"Processed\",\n        \"order_date\": \"2022-11-05T16:47:22+07:00\",\n        \"shipped_date\": \"0001-01-01T00:00:00Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get Specific Order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/orders/1/6",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders",
+						"1",
+						"6"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "localhost:8080/v1/orders/1/6",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/orders/1/6",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"orders",
+								"1",
+								"6"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 05 Nov 2022 09:49:25 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "158"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"order_id\": 6,\n    \"customer_id\": 1,\n    \"product_id\": 4,\n    \"quantity\": 1,\n    \"status\": \"Processed\",\n    \"order_date\": \"2022-11-04T17:42:58+07:00\",\n    \"shipped_date\": \"0001-01-01T00:00:00Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Change Order Status",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"order_id\" : 2,\r\n    \"status\" : \"sent\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "localhost:8080/v1/orders",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"order_id\" : 2,\r\n    \"status\" : \"sent\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"orders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 05 Nov 2022 09:50:03 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "153"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"order_id\": 2,\n    \"customer_id\": 3,\n    \"product_id\": 3,\n    \"quantity\": 1,\n    \"status\": \"Sent\",\n    \"order_date\": \"2022-11-04T17:15:47+07:00\",\n    \"shipped_date\": \"0001-01-01T00:00:00Z\"\n}"
+				}
+			]
+		}
+	]
+}
