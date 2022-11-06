@@ -56,7 +56,7 @@ func Router(r *gin.RouterGroup) {
 	// POST new customers and add to database
 	r.POST("/customers", customerHandler.AddCustomer(customerUsecase))
 	
-	// Checkout product by id product 
+	// Checkout product by product id 
 	r.POST("/products/checkout", cartHandler.AddProductToCart(cartUsecase))
 
 	// buy products directly without checkout
