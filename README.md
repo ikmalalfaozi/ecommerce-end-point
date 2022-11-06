@@ -72,7 +72,7 @@ Implementasi program ditulis dalam bahasa Go dan database MySQL.
     go run main.go
     ```
 
-## How to Run
+## How to Use
 
 Contoh penggunaan end point ecommerce ini dapat dilihat pada folder documentation
 
