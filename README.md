@@ -61,6 +61,12 @@ Implementasi program ditulis dalam bahasa Go dan database MySQL.
     ```
     go mod tidy
     ```
+-   Buat database dengan nama `ecommerce-end-point`
+-   Import file `ecommerce-end-point.sql` ke database `ecommerce-end-point`
+-   Pastikan dsn yang ada di file `src/internal/delivery/router.go` sesuai dengan user, password, dan nama database yang dibuat
+    ```
+    dsn := user:pass@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local
+    ```
 -   Jalankan program dengan perintah
     ```
     go run main.go
